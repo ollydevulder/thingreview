@@ -16,7 +16,7 @@
                     <div class="thing">
                         <button class="thing-button" onclick="thingContent(this)" title="Open/Close">{{ result.name }}</button>
                         <div class="thing-content">
-                            <a href="{% url 'things:thing' result.id %}">thing page</a>
+                            <a href="{% url 'things:thing' result.id %}">View Page</a>
                             <p>
                             {% if result.rating != None %}
                                 {{ result.rating }}/5 ({{ result.review_set.count }} review{{ result.review_set.count|pluralize }})
