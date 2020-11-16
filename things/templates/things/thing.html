@@ -5,7 +5,10 @@
 
 {% block body %}
     {% if thing.rating != None %}
-        <small>This thing has an average rating of <strong>{{ thing.rating }}</strong></small>
+        <small>This thing has an average rating of <strong>{{ thing.rating }}</strong></small><br>
+    {% endif %}
+    {% if thing.website %}
+        <small><a href="{{ thing.website }}" title="External Link" target="_blank">Website</a></small>
     {% endif %}
     <h3>About</h3>
     <p>{{ thing.description }}</p>
